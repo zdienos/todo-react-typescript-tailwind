@@ -2,7 +2,7 @@ import { Todo } from "../data/types/todo";
 import TodoItem from "./TodoItem";
 
 interface TodoListProps {
-    todos: Todo;
+    todos: Todo[];
     onCompletedChange: (id: number, completed: boolean) => void;
     onDelete: (id: number) => void;
 }
@@ -30,7 +30,6 @@ export default function TodoList({
                 />
             ))}
         </div>
-        todo
         {todos.length === 0 && (
             <p className="text-center text-gray-500">No todos yet</p>
         )}
